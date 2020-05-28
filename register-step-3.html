@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/register-style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0b4303f61f.js" crossorigin="anonymous"></script>
+    <script src="src/register-script.js" type="text/javascript"></script>
+	<title>Register</title>
+</head>
+<body>
+	<div id="content">
+	<header>
+		<img src="img/logo.png" id="logo" alt="logo" onclick="location.href='index.html'">
+		<button type="button" id="login-header" class="text-button" onclick="location.href='login.html'">Login</button>
+	</header>
+	<section id="main-section2">
+		<div id="container">
+			<div id="registration-steps">
+					<span>1. Choose a Plan<i class="fas fa-angle-right"></i></span>
+					<span>2. Personal Information<i class="fas fa-angle-right"></i></span>
+					<span class="current-step">3. Payment Details</span>
+				</div>
+		</div>
+		<div id="container-payment">
+	<div id="payment-method">
+		<h1>Choose a payment method</h1>
+		<p>After your free trial you will NOT be automatically charged without confirming you would like to continue using GameNow&#8482;.</p>
+		<div class="payment-option" id="payment-opiton-1" onclick="setActivePaymentOption(this.id)">
+			<img src="img/cards.png" alt="Pay with credit card">
+			<p>Pay with credit card</p>
+		</div>
+		<div class="payment-option" id="payment-opiton-2" onclick="setActivePaymentOption(this.id)">
+			<img src="img/paypal.png" alt="Pay with PayPal">
+			<p>Pay with PayPal&#8482;</p>
+		</div>
+		
+			<div id="buttons-below">
+			<i class="fas fa-angle-left fa-5x" onclick="location.href='register-step-2.html'"></i>
+			<button value="finish" id="finish" class="btn-next" onclick="location.href='login.html'">Finish</button>
+		</div>
+	</div>
+</div>
+    </section>
+</div>
+
+		<footer>
+		<button class="text-button">About us</button>
+		<button class="text-button">Team</button>
+		<button class="text-button">Terms of use</button>
+		<button class="text-button">Give feedback</button>
+		<button class="text-button">Test connection</button>
+		<button class="text-button">Help</button>
+		<button class="text-button">Contact us</button>
+	</footer>
+
+</html>

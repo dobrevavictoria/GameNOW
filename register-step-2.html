@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/register-style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0b4303f61f.js" crossorigin="anonymous"></script>
+	<title>Register</title>
+</head>
+<body>
+	<div id="content">
+	<header>
+		<img src="img/logo.png" id="logo" alt="logo" onclick="location.href='index.html'">
+		<button type="button" id="login-header" class="text-button" onclick="location.href='login.html'">Login</button>
+	</header>
+	<section id="main-section">
+		<div id="container">
+		<div id="registration-steps">
+			<span>1. Choose a Plan<i class="fas fa-angle-right"></i></span>
+			<span class="current-step">2. Personal Information<i class="fas fa-angle-right"></i></span>
+			<span>3. Payment Details</span>
+		</div>
+		</div>
+		<div id="register-section">
+			<div id="wrapper">
+				<div class="form-group field">
+					<input type="text" class="form-field" id="nickname" name="nickname" placeholder="Nickname" required>
+					<label for="nickname" class="form-label">Username</label> 
+				</div>
+				<div class="form-group field">
+					<input type="text" class="form-field" id="first-name" name="first-name" placeholder="First Name" required>
+					<label for="first-name" class="form-label">First Name</label> 
+				</div>
+				<div class="form-group field">
+					<input type="text" class="form-field" id="last-name" name="last-name" placeholder="Last Name" required>
+					<label for="last-name" class="form-label">Last Name</label> 
+				</div>
+				<div class="form-group field">
+					<input type="email" class="form-field" id="email" name="email" placeholder="email" required>
+					<label for="email" class="form-label">Email</label> 
+				</div>
+				<div class="form-group field">
+					<input type="password" class="form-field" id="password" placeholder="Password" name="password">
+					<label for="password"  class="form-label">Password</label>
+				</div>
+			
+				<div class="form-group field">
+						<input type="password" class="form-field" id="confirm-password" placeholder="Confirm Password" name="confirm-password">
+						<label for="password" class="form-label">Confirm Password</label>
+				</div>
+				<p class="note-above">We are almost there!</p>
+				<div id="buttons-below">
+					<i class="fas fa-angle-left fa-5x" onclick="location.href='register.html'"></i>
+					<button type="submit" id="continue" value="continue" class="btn-next" onclick="location.href='register-step-3.html'">Continue</button>
+				</div>
+			</div>
+		</div>
+    </section>
+</div>
+
+		<footer>
+		<button class="text-button">About us</button>
+		<button class="text-button">Team</button>
+		<button class="text-button">Terms of use</button>
+		<button class="text-button">Give feedback</button>
+		<button class="text-button">Test connection</button>
+		<button class="text-button">Help</button>
+		<button class="text-button">Contact us</button>
+	</footer>
+</body>
+</html>

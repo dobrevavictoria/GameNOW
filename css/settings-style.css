@@ -1,0 +1,295 @@
+:root{
+		 --dark-blue: #0d47a1;
+		 --blue-1: #e3f2fd;
+		 --red-light: #ff7043;
+		 --red-3: #ffab91;
+         --red-dark: #d84315;
+  		 --light-grey: #eceff1;
+  		 --dark-grey: #607d8b;
+     --light-blue: #90caf9;
+}
+#content{
+	min-height:100vh;
+    overflow: hidden;
+}
+
+#main-section-div{
+	min-height: 80vh;
+	width: 40vw;
+	margin: 0px auto;
+	margin-top:20px;
+	display: block;
+	/*display: flex;
+	align-items: center;
+	justify-content: center;*/
+	position: relative;
+
+}
+#main-section-div section{
+width: 50%;
+min-height: 60vh;
+padding-top:5vh;
+margin: 0px auto;
+margin-top: 40px;
+}
+#main-section-div section > div{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+h1{
+	font-size: 2rem;
+	color: var(--dark-blue);
+	text-align:center;
+}
+h2{
+	margin-top:30px;
+	font-size: 1.5rem;
+	color: var(--dark-blue);
+	text-align:center;
+}
+
+#saveBtn	{
+	border: none;
+	background-color: var(--red-light);
+	color:white;
+	padding: 10px 10px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	border-radius: 25px;
+    margin-top:20px;
+	width: 50%;
+	margin: 0px auto;
+	left:25%;
+}
+
+#profile-bar
+{
+		margin-bottom: 100px;
+		display: block;
+		position: relative;
+
+}
+#profile-bar .profile-content{
+  width:50%;
+  display:block;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index:10;
+  margin: 0px auto;
+  position: absolute;
+  left:25%;
+
+}
+#left-section{
+width: 20%;
+height: 50vh;
+padding-top:5vh;
+margin: 0px auto;
+position: relative;
+margin-top: 40px;
+float:left;
+margin-left: 50px;
+}
+
+#profile-bar ul,
+#left-section ul,
+#my-profiles-subsection ul{
+   position: relative;
+   display: inline-block;
+    list-style: none;
+    position: relative;
+    float:left;
+    margin: 0;
+    padding: 0;
+}
+
+
+#left-section ul a:hover{
+background-color: var(--red-3);
+color: white;
+}
+#left-section ul .activeli{
+	background-color: var(--red-light) !important;
+	color: white !important;
+}
+
+#profile-bar ul a,
+#left-section ul a{
+  
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  height: inherit;
+  height:50px;
+  width:210px;
+  padding:0 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+#my-profiles-subsection ul a{
+display: inline;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  height: inherit;
+  height:50px;
+  width:210px;
+  padding:0 10px;
+  text-align: left;
+
+}
+#profile-bar ul a{
+	  color:var(--dark-grey);
+}
+
+.inactiveli{
+	background-color: var(--light-grey);
+	color: var(--dark-grey);
+}
+
+
+#profile-bar ul:first-child > li > a{
+  color: white;
+}
+
+#profile-bar ul li{
+  position: relative;
+  float: left;
+  padding:0;
+  margin: 0;
+}
+#profile-bar ul li i{
+margin-left: 5px;
+}
+#profile-bar ul li:hover{
+  background-color: var(--light-grey); 
+}
+
+#profile-bar ul:first-child > li:hover > a{
+  color: var(--dark-grey);
+}
+
+#profile-bar ul:hover ul{
+  transition: 0s;
+}
+
+#profile-bar ul ul {
+visibility: hidden;
+  position: absolute;
+  left:0;
+  top:100%;
+  background-color: white;
+  box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.2);
+  padding: 0;
+  width:100%;
+}
+#profile-bar ul ul li{
+  float: none;
+  padding:0;
+}
+
+#profile-bar ul ul a{
+  padding: 10px 15px;
+}
+
+#profile-bar ul li:hover > ul{
+ visibility: visible;
+ transition-delay: 0s;
+
+}
+#general-info-section{
+	width:100%;
+	position: relative;
+}
+
+#main-section-div > section>div:not(:first-child){
+	display: none;
+}
+
+#save-info-message{
+	color: var(--red-dark);
+	visibility: hidden;
+}
+
+#forgotten-credentials-section p:last-child{
+	visibility: hidden;
+	margin-top: 50px;
+}
+#manage-profiles-section > div{
+	display: none;
+
+}
+
+#manage-profiles-section a,
+#subscription-plans-section a{
+	 text-decoration: none;
+	 color: var(--dark-blue);
+}
+#manage-profiles-section a:hover,
+#subscription-plans-section a:hover{
+	color: var(--light-blue);
+}
+/*
+#my-profiles-subsection ul li i{
+	float: right;
+	display: inline;
+	color: var(--dark-blue);
+	margin-left: 15px;
+	cursor: pointer;
+
+}
+#my-profiles-subsection ul li{
+	margin-top: 10px;
+	width:260px;
+}
+#my-profiles-subsection ul li i:hover{
+	color: var(--light-blue);
+}
+*/
+
+
+.subsection-list ul{
+margin: 0px auto;
+   position: relative;
+   display: inline-block;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.subsection-list a{
+	 text-decoration: none;
+	 color: var(--dark-blue);	
+}
+.subsection-list a:hover{
+	color: var(--light-blue);
+}
+.subsection-list ul li i{
+	float: right;
+	display: inline;
+	color: var(--dark-blue);
+	margin-left: 15px;
+	cursor: pointer;
+
+}
+
+.subsection-list ul li{
+	margin-top: 10px;
+	width:260px;
+
+}
+.subsection-list ul li i:hover{
+	color: var(--light-blue);
+}

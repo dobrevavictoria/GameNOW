@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/settings-style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0b4303f61f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="src/settings-script.js"></script>
+	<title>Settings</title>
+</head>
+<body>
+	<div id="content">
+	<header>
+		<a href="#"><img src="img/logo.png" id="logo" alt="logo" onclick="location.href='index.html'"></a>
+		<nav id="nav-bar">
+			<ul>
+			<li><a href="#">Games</a>
+				<ul>
+					<li><a href="all-games.html">Top 30</a></li>
+					<li><a href="all-games.html">Upcoming</a></li>
+				</ul>
+			</li>
+			<li><a href="#">My collection</a>
+				<ul>
+				<li><a href="user-profile.html">Favourites</a></li>
+				<li><a href="user-profile.html">Played by me</a></li>
+				</ul>
+			</li>
+			<li><a href="users.html">Users</a></li>
+			<li id="account-button"><a href="#">
+					<img src="img/woman.png" alt="My Profile">
+					<label>vixypixy</label>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			<ul>
+				<li><a href="user-profile.html">My profile</a></li>
+				<li><a href="settings.html">Settings</a></li>
+			</ul>
+			</li>
+		</ul>
+	</nav>
+	</header>
+	<section id="settings-section">
+		<section id="left-section">
+			<ul>
+				<li><a href="#" id="a1" class="activeli" onClick="showSection('general-info-section', this.id)">General Information</a></li>
+				<li><a href="#" id="a2" class="inactiveli" onClick="showSection('change-password-section',this.id)">Change Password</a></li>
+				<li><a href="#" id="a3" class="inactiveli" onClick="showSection('add-email-section', this.id)">Add Email</a></li>
+				<li><a href="#" id="a4" class="inactiveli" onClick="showSection('forgotten-credentials-section',this.id)">Forgotten Credentials</a></li>
+				<li><a href="#" id="a5" class="inactiveli" onClick="showSection('manage-profiles-section',this.id)">Manage Profiles</a></li>
+				<li><a href="#" id="a6" class="inactiveli" onClick="showSection('subscription-plans-section',this.id)">Subscription Plan</a></li>
+			</ul>
+		</section>
+		<div id="main-section-div">
+			<h1>Settings</h1>
+				<div id="profile-bar">
+					<div class="profile-content">
+						<label>Select profile</label>
+						<ul>
+							<li><a href="#">Main account (Vixypixy)<i class="fa fa-angle-down"></i></a>
+								<ul>
+									<li><a href="#" id="user_2" onClick="setCurrentUser(this.id)">Ivan123</a></li>
+									<li><a href="#" id="user_3" onClick="setCurrentUser(this.id)">ddTrump</a><li>
+								</ul>
+							</li>
+							</ul>
+					</div>
+				</div>
+		<section>
+			<div id="general-info-section">
+			
+					<div class="form-group field">
+								<input type="text" class="form-field" id="username" placeholder="Username" name="username">
+								<label for="username" class="form-label">Username</label>
+					</div>
+					
+ 					<div class="form-group field">
+								<input type="text" class="form-field" id="firstname" placeholder="First name" name="firstname">
+								<label for="firstname" class="form-label">First name</label>
+					</div> 	
+ 					<div class="form-group field">
+								<input type="text" class="form-field" id="lastname" placeholder="Last name" name="lastname">
+								<label for="lastname" class="form-label">Last name</label>
+					</div>
+
+					<h2>Visibility</h2>
+					<p>Select which fields to be visible in your profile.</p>
+					
+					<div id="username-checkbox">
+						<label class="container" for="username-input">Username
+							<input type="checkbox" id="username-input" name="username-input" value="username-input" disabled="true" checked="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="firstname-checkbox">
+						<label class="container" for="firstname-input">First name
+							<input type="checkbox" id="firstname-input" name="firstname-input" value="firstname-input">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="lastname-checkbox">
+						<label class="container" for="lastname-input">Last name
+							<input type="checkbox" id="lastname-input" name="lastname-input" value="lastname-input">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+				<div id="change-password-section">
+					<div class="form-group field">
+								<input type="password" class="form-field" id="old-password" placeholder="Old password" name="old-password">
+								<label for="old-password" class="form-label">Old password</label>
+					</div>
+					<div class="form-group field">
+								<input type="password" class="form-field" id="new-password" placeholder="New password" name="new-password">
+								<label for="new-password" class="form-label">New password</label>
+					</div>
+					<div class="form-group field">
+								<input type="password" class="form-field" id="confirm-new-password" placeholder="Confirm new password" name="confirm-new-password">
+								<label for="confirm-new-password" class="form-label">Confirm new password</label>
+					</div>
+				</div>
+				<div id="add-email-section">
+				<p>You can add one more email to your account.</p>
+					<div class="form-group field">
+								<input type="email" class="form-field" id="newemail" placeholder="New email" name="newemail">
+								<label for="newemail" class="form-label">New email</label>
+					</div>
+				</div>
+				<div id="forgotten-credentials-section">
+					<p>In case of forgotten credentials, send a verification mail to your account email.</p>
+					<p>If you have doubts for your account being stolen, <a href="#">Contact an administrator</a></p>
+				</div>
+				<div id="manage-profiles-section">
+					<h2><a href="#" id="manage_profiles_subsection_1" onClick="showManageProfilesSubsection(this.id, 'add-account-subsection')">Add profile</a></h2>
+						<div id = "add-account-subsection">
+							<div class="form-group field">
+								<input type="text" class="form-field" id="username-newaccount" placeholder="Username" name="username-newaccount">
+								<label for="username-newaccount" class="form-label">Username</label>
+							</div>
+							<div class="form-group field">
+								<input type="text" class="form-field" id="firstname-newaccount" placeholder="First name" name="firstname-newaccount">
+								<label for="firstname-newaccount" class="form-label">First name</label>
+							</div> 	
+							<div class="form-group field">
+								<input type="text" class="form-field" id="lastname-newaccount" placeholder="Last name" name="lastname-newaccount">
+								<label for="lastname-newaccount" class="form-label">Last name</label>
+							</div>
+								<div class="form-group field">
+										<input type="password" class="form-field" id="password-newaccount" placeholder="Password" name="password-newaccount">
+										<label for="password-newaccount" class="form-label">Password</label>
+							</div>
+							<div class="form-group field">
+								<input type="password" class="form-field" id="confirm-password-newaccount" placeholder="Confirm password" name="confirm-password-newaccount">
+								<label for="confirm-password-newaccount" class="form-label">Confirm password</label>
+							</div>
+						</div>
+						<h2><a href="#" id="manage_profiles_subsection_2" onClick="showManageProfilesSubsection(this.id, 'my-profiles-subsection')">My profiles</a></h2>
+						<div id="my-profiles-subsection" class="subsection-list">
+										<ul>
+											<li><a href="#">Main Account (Vixypixy)</a><i class="fa fa-trash-o" alt="Delete" title="Delete"></i>
+												<i class="fa fa-cog" alt="Settings" title="Settings"></i></li>
+											<li><a href="#">Ivan123</a><i class="fa fa-trash-o" alt="Delete" title="Delete"></i>
+												<i class="fa fa-cog" alt="Settings" title="Settings"></i></li>
+											<li><a href="#">ddTrump</a><i class="fa fa-trash-o" alt="Delete" title="Delete"></i>
+												<i class="fa fa-cog" alt="Settings" title="Settings"></i><li>
+										</ul>
+						</div>
+	
+				</div>
+				<div id="subscription-plans-section" class="subsection-list">
+					<p>Your subscription ends after <strong>47 days</strong>.</p>
+					<h2>Select plan</h2>
+					<div id="chk-basic-plan">
+						<label class="container" for="basic-plan-input">Basic
+							<input type="checkbox" id="basic-plan-input" name="basic-plan-input" value="basic-plan-input" checked="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="chk-standard-plan">
+						<label class="container" for="standard-plan-input" >Standard
+							<input type="checkbox" id="standard-plan-input" name="standard-plan-input" value="standard-plan-input" disabled="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="chk-premium-plan">
+						<label class="container" for="premium-plan-input">Premium
+							<input type="checkbox" id="premium-plan-input" name="premium-plan-input" value="premium-plan-input" disabled="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<h2>Select plan type</h2>
+					<div id="monthly-plan-checkbox">
+						<label class="container" for="monthly-plan-input">Monthly
+							<input type="checkbox" id="monthly-plan-input" name="monthly-plan-input" value="monthly-plan-input" disabled="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="annual-plan-checkbox">
+						<label class="container" for="annual-plan-input">Annual
+							<input type="checkbox" id="annual-plan-input" name="annual-plan-input" value="annual-plan-input" disabled="true" checked="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<h2>Select payment method</h2>
+					<div id="card-checkbox">
+						<label class="container" for="card-input">Card
+							<input type="checkbox" id="card-input" name="card-input" value="card-input" checked="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="epay-checkbox">
+						<label class="container" for="epay-input">ePay
+							<input type="checkbox" id="epay-input" name="epay-input" value="epay-input" disabled="true">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+		</section>	
+		<button id="saveBtn" onclick="ShowSaveConfirmation()">Save</button>
+		<p id="save-info-message">Changes saved successfully!</p>
+		</div>
+	</section>
+</div>
+	<footer>
+		<button class="text-button">About us</button>
+		<button class="text-button">Team</button>
+		<button class="text-button">Terms of use</button>
+		<button class="text-button">Give feedback</button>
+		<button class="text-button">Test connection</button>
+		<button class="text-button">Help</button>
+		<button class="text-button">Contact us</button>
+	</footer>
+</body>
+</html>

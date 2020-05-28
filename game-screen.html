@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/game-screen-style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0b4303f61f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="src/game-screen-script.js"></script>
+	<title>Play now</title>
+</head>
+<body>
+	<div id="content">
+	<header>
+		<a href="#"><img src="img/logo.png" id="logo" alt="logo" onclick="location.href='index.html'"></a>
+		<nav id="nav-bar">
+			<ul>
+			<li><a href="#">Games</a>
+				<ul>
+					<li><a href="all-games.html">Top 30</a></li>
+					<li><a href="all-games.html">Upcoming</a></li>
+				</ul>
+			</li>
+			<li><a href="#">My collection</a>
+				<ul>
+				<li><a href="user-profile.html">Favourites</a></li>
+				<li><a href="user-profile.html">Played by me</a></li>
+				</ul>
+			</li>
+			<li><a href="users.html">Users</a></li>
+			<li id="account-button"><a href="#">
+					<img src="img/woman.png" alt="My Profile">
+					<label>vixypixy</label>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			<ul>
+				<li><a href="user-profile.html">My profile</a></li>
+				<li><a href="settings.html">Settings</a></li>
+			</ul>
+			</li>
+		</ul>
+	</nav>
+	</header>
+	<section id="login-section">
+		<div id="wrapper">
+			<div class="search-container">
+    			
+     			 <input type="text" placeholder="Search" name="search">
+     			 <button type="submit"><i class="fa fa-search"></i></button>
+  			</div>
+  			<div class="main-column">
+  				<div class="game-screen">
+  					<header>
+  					<a href="#" onClick="showMainButtons()"><i class="fa fa-bars fa-2x"></i></a>
+  				</header>
+  				<section>
+  					<div class="ball-loader">
+ 						<div class="ball-loader-ball ball1"></div>
+ 						<div class="ball-loader-ball ball2"></div>
+ 						<div class="ball-loader-ball ball3"></div>
+					</div>
+  					<div class="buttons" id="mainButtons">
+  					<button class="btn-game-option" onclick="showLoading('0')">Start</button>
+  					<button class="btn-game-option" onclick="ShowScreen('saveGameScreen','saveInfoStatus')">Save game</button>
+  					<button class="btn-game-option" onclick="ShowScreen('myGamesScreen')">My saved games</button>
+  					<button class="btn-game-option" onclick="ShowScreen('reportGameScreen','reportInfoStatus')">Report game</button>
+  					</div>
+  				<div class="game-option-screen" id="saveGameScreen">
+  					<div class="form-group field">
+						<input type="text" class="form-field" id="gamename" placeholder="Game name" name="gamename">
+						<label for="gamename" class="form-label">Game name</label>
+					</div>
+					<div class="save-option-buttons">
+						<a href="#" onClick="ShowSaveGameConfirmation('0')"><i class="fas fa-angle-left fa-3x"></i></a>
+						<button id="saveBtn" onclick="ShowSaveGameConfirmation('1')">Save</button>
+					</div>
+						<p class="info-status" id="saveInfoStatus">Game saved successfully!</p>
+  				</div>
+  				<div class="game-option-screen" id="myGamesScreen">
+  					<button class="btn-game-option" onclick="showLoading('1')">Game 1</button>
+  					<button class="btn-game-option" onclick="showLoading('1')">Game 2</button>
+  					<button class="btn-game-option" onclick="showLoading('1')">Game 3</button>
+  				</div>
+  				<div class="game-option-screen" id="reportGameScreen">
+  					<div class="form-group field">
+						<input type="text" class="form-field" id="report" placeholder="Report a problem" name="report">
+						<label for="report" class="form-label">Report a problem</label>
+					</div>
+					<div class="save-option-buttons">
+  					<a href="#" onClick="ShowReportGameConfirmation('0')"><i class="fas fa-angle-left fa-3x"></i></a>
+						<button id="reportBtn" onclick="ShowReportGameConfirmation('1')">Report</button></div>
+						<p class="info-status" id="reportInfoStatus">Report is recorded.</p>
+				</div>
+  	
+  				</section>
+  					<footer>
+  						<div>
+  						<i class="fa fa-play fa-2x"></i>
+  						<i class="fa fa-volume-up fa-2x"></i>
+  					</div>
+  					<div>
+  						<i class="fa icon-fullscreen fa-2x"></i>
+  						<i class="fa fa-cog fa-2x"></i>
+  					</div>
+  					</footer>
+  			</div>
+ 				</div>
+  				<div class="comments-section">
+  					<hr>
+  					<h1>Comments</h1>
+  						<header><img src="img/woman.png" alt="Vixypixy">
+  							<label><strong>Vixypixy</strong></label>
+  							<textarea placeholder="Write comment"></textarea>
+  							<button id="addCommentButton" onclick="">Add comment</button>
+  						</header>
+  					<div class="comment">
+  						<hr>
+  						<header><img src="img/avatar1.png" alt="Ivan123">
+  							<label><strong>Ivan123</strong></label>
+  							<label>1 hour ago</label>
+  							<p>Wow amazing I reached level 101!</p>
+  						</header>
+  					</div>
+  					<hr>
+  				</div>
+			</div>
+	</section>
+</div>
+	<footer>
+		<button class="text-button">About us</button>
+		<button class="text-button">Team</button>
+		<button class="text-button">Terms of use</button>
+		<button class="text-button">Give feedback</button>
+		<button class="text-button">Test connection</button>
+		<button class="text-button">Help</button>
+		<button class="text-button">Contact us</button>
+	</footer>
+</body>
+</html>
